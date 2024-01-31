@@ -63,3 +63,27 @@ def fibonacci_recursive(n):
     """ Recursive version of the Fibonacci function. Less efficient but useful for educational purposes. """
     if n <= 0:
         return []
+        elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        seq = fibonacci_recursive(n-1)
+        seq.append(seq[-1] + seq[-2])
+        return seq
+
+def test_fibonacci():
+    """ Unit tests for the fibonacci function. """
+    assert fibonacci(0) == []
+    assert fibonacci(1) == [0]
+    assert fibonacci(2) == [0, 1]
+    assert fibonacci(5) == [0, 1, 1, 2, 3]
+    print("All tests passed!")
+
+if __name__ == "__main__":
+    # Example usage
+    fibonacci_sequence = fibonacci(10)
+    print("Fibonacci Sequence:", fibonacci_sequence)
+
+    # Run tests
+    test_fibonacci()
