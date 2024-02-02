@@ -4,10 +4,10 @@
 def checkif_palindrome(x):
 	return x == x[::-1]
 
-s = "madam"
-ans = isPalindrome(s)
+x = "madam"
+Final = checkif_palindrome(x)
 
-if ans:
+if Final:
 	print("Yes")
 else:
 	print("No")
